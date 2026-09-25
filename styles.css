@@ -1,0 +1,261 @@
+/* =========================
+CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+color: #164653;
+background: #fff8ed;
+}
+
+
+/* =========================
+PORTADA
+========================= */
+
+.portada {
+min-height: 100vh;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+text-align: center;
+
+padding: 40px 20px;
+
+background:
+linear-gradient(
+rgba(0, 170, 190, 0.75),
+rgba(255, 190, 90, 0.70)
+);
+
+position: relative;
+overflow: hidden;
+}
+
+
+/* Decoraciones de la portada */
+
+.portada::before {
+content: "🌎 ✈️ 🌴 🌺 🗺️";
+position: absolute;
+top: 45px;
+left: 50%;
+transform: translateX(-50%);
+
+font-size: 38px;
+letter-spacing: 12px;
+}
+
+.portada::after {
+content: "🌺 🌴 ✈️ 🌎 🌺";
+position: absolute;
+bottom: 35px;
+left: 50%;
+transform: translateX(-50%);
+
+font-size: 35px;
+letter-spacing: 10px;
+}
+
+
+/* =========================
+CONTENIDO
+========================= */
+
+.portada-contenido {
+max-width: 850px;
+
+padding: 60px 50px;
+
+background: rgba(255, 255, 255, 0.92);
+
+border-radius: 35px;
+
+box-shadow:
+0 20px 50px rgba(0, 0, 0, 0.20);
+
+position: relative;
+z-index: 2;
+}
+
+
+/* =========================
+SUBTÍTULO
+========================= */
+
+.subtitulo {
+color: #f05b6f;
+
+font-size: 18px;
+
+font-weight: bold;
+
+letter-spacing: 4px;
+
+margin-bottom: 15px;
+}
+
+
+/* =========================
+TÍTULO
+========================= */
+
+.portada h1 {
+font-size: clamp(50px, 8vw, 90px);
+
+line-height: 1.05;
+
+color: #008fa3;
+
+margin-bottom: 25px;
+}
+
+
+/* =========================
+DESCRIPCIÓN
+========================= */
+
+.descripcion {
+max-width: 650px;
+
+margin: auto;
+
+font-size: 20px;
+
+line-height: 1.7;
+
+color: #315c65;
+}
+
+
+/* =========================
+BOTÓN
+========================= */
+
+#comenzar {
+margin-top: 35px;
+
+padding: 16px 35px;
+
+border: none;
+
+border-radius: 35px;
+
+background: #f05b6f;
+
+color: white;
+
+font-size: 17px;
+
+font-weight: bold;
+
+cursor: pointer;
+
+transition: 0.3s;
+}
+
+#comenzar:hover {
+background: #e83f58;
+
+transform: translateY(-4px) scale(1.03);
+
+box-shadow:
+0 10px 25px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================
+MAPA
+========================= */
+
+#mapa {
+min-height: 500px;
+
+padding: 80px 20px;
+
+text-align: center;
+
+background: #e4f8f8;
+}
+
+#mapa h2 {
+font-size: 45px;
+
+color: #008fa3;
+
+margin-bottom: 15px;
+}
+
+#mapa p {
+font-size: 18px;
+}
+
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+background: #164653;
+
+color: white;
+
+text-align: center;
+
+padding: 25px;
+}
+
+
+/* =========================
+CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+.portada {
+padding: 25px 15px;
+}
+
+.portada-contenido {
+padding: 50px 25px;
+}
+
+.portada::before {
+font-size: 25px;
+letter-spacing: 5px;
+}
+
+.portada::after {
+font-size: 25px;
+letter-spacing: 5px;
+}
+
+.subtitulo {
+font-size: 14px;
+letter-spacing: 2px;
+}
+
+.portada h1 {
+font-size: 50px;
+}
+
+.descripcion {
+font-size: 17px;
+}
+
+#comenzar {
+width: 100%;
+}
+}
